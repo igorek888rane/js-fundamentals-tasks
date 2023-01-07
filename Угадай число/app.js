@@ -28,7 +28,7 @@ class guessNumApp {
         }
     }
 }
-const guessNumAppEx = new guessNumApp()
+const guessNumAppInstance = new guessNumApp()
 
 
 
