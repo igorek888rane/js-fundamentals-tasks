@@ -9,3 +9,6 @@ const addByFour = addByX(4)
 console.log(addByFour(3));
 console.log(addByFour(5));
 
+
+
+
