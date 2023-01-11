@@ -1,8 +1,8 @@
 
 //С рекурсией
-const censorWith = () => {
+const censorWithRecursion = () => {
     const censorParams = []
-    return function censorPhrase(oneParam, secondParam = '') {
+    return function changeScene(oneParam, secondParam = '') {
         if (secondParam) {
             censorParams.push([oneParam, secondParam])
         } else {
@@ -10,7 +10,7 @@ const censorWith = () => {
             if (censorEl === undefined) {
                 return oneParam
             }
-            return censorPhrase( oneParam.replaceAll(censorEl[0], censorEl[1]))
+            return changeScene( oneParam.replaceAll(censorEl[0], censorEl[1]))
 
         }
     }
@@ -29,7 +29,7 @@ const censor = () => {
         }
     }
 }
-const changeScene = censorWith();
+const changeScene = censorWithRecursion();
 changeScene('PHP', 'JS');
 
 changeScene('backend', 'frontend');
