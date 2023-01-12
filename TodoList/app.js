@@ -3,11 +3,30 @@ document.querySelector('button').addEventListener('click', handleClick);
 document.addEventListener('DOMContentLoaded', loadTodos);
 
 
+// class TodoList  {
+//     list = document.getElementById('todos');
+//     button  = document.querySelector('button')
+//     constructor() {
+//         this.button.addEventListener('click',this.handleClick)
+//     }
+//     handleClick() {
+//         const newTodo = this.previousElementSibling.value.trim();
+//
+//         if (newTodo) {
+//             createTodo(newTodo);
+//             saveToStorage(newTodo);
+//             this.previousElementSibling.value = '';
+//         } else {
+//             alert('input field is empty ');
+//         }
+//     }
+//
+// }
+
 function handleClick() {
     const newTodo = this.previousElementSibling.value.trim();
 
     if (newTodo) {
-        // add todo
         createTodo(newTodo);
         saveToStorage(newTodo);
         this.previousElementSibling.value = '';
